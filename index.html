@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Calculator</title>
+		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="main.js"></script>
+		<body>
+			<div id="container">
+				<div id="sub-container">
+					<!-- Screen -->
+					<div id="screen"></div>
+
+					<!-- Just the ON button -->
+					<div class="rows" style="justify-content: right">
+						<button  data-type="on" id="on-button">ON</button>
+					</div>
+					<!-- Every other rowss -->
+					<div class="rows first">
+						<button data-type="num" value="7">7</button>
+						<button data-type="num" value="8">8</button>
+						<button data-type="num" value="9">9</button>
+						<button data-type="del" style="background: rgb(236, 78, 5)">DEL</button>
+						<button data-type="ac" value="" style="background: rgb(236, 78, 5)">AC</button>
+					</div>
+					<div class="rows">
+						<button data-type="num" value="4">4</button>
+						<button data-type="num" value="5">5</button>
+						<button data-type="num" value="6">6</button>
+						<button data-type="operator" value="×">×</button>
+						<button data-type="operator" value="÷">÷</button>
+					</div>
+					<div class="rows">
+						<button data-type="num" value="1">1</button>
+						<button data-type="num" value="2">2</button>
+						<button data-type="num" value="3">3</button>
+						<button data-type="operator" value="+">+</button>
+						<button data-type="operator" value="-">-</button>
+					</div>
+					<div class="rows last">
+						<button data-type="num" value="0">0</button>
+						<button data-type="point" value=".">.</button>
+						<button data-type="times10">*10^</button>
+						<button data-type="ans">Ans</button>
+						<button data-type="equal">=</button>
+					</div>		
+				</div>
+			</div>
+
+		</body>
+	</head>
+</html>
