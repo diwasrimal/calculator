@@ -1,31 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("content loaded");
 
-    var buttons = document.querySelectorAll('button');
-    var screen = document.getElementById('screen');
-    var result, operationString;
+    let buttons = document.querySelectorAll('button');
+    let inputScreen = document.getElementById('input');
+    let result = document.getElementById('result');
+    let equaledBefore = false;
 
     // Looping over every button
     for (let i = 0; i < buttons.length; i++) {
         
         let button = buttons[i];
-        console.log(button.dataset.value)
-
+   
         // Adding a event listener for each button
         button.addEventListener('click', () => {
-
-            let buttonType = button.dataset.type;
-            if (buttonType == 'ac') {
-                screen.innerHTML = null
-            }
-            else if (buttonType == "del") {
-                screen.innerHTML = screen.innerHTML.slice(0, screen.innerHTML.length - 1)
-            }
-            console.log(button.dataset.type);
-            screen.innerHTML = screen.innerHTML.concat(button.value);
-            console.log(screen.innerHTML);
             
+            let buttonType = button.dataset.type;
+            
+            switch (buttonType) {
+                case 'ac':
+                    clear(inputScreen);
+                    clear(result);
+                    break;
+
+                case 'del':
+                    clear(result);
+                    inputScreen.innerHTML = inputScreen.innerHTML.slice(0, inputScreen.innerHTML.length - 1);    
+                    break;
+
+                case 'equals':
+                    result.innerHTML = eval(inputScreen.innerHTML);
+                    // equaledBefore = true;
+                    break;
+                
+                case 'ans':
+                    inputScreen.innerHTML = result.innerHTML;
+                    clear(result);
+
+            }
+            
+
+            console.log("You clicked a num")
+
+            // if (equaledBefore && button.dataset.type == 'num') {
+            //     console.log("yes ")
+            //     clear(result);
+            //     clear(inputScreen);
+            //     equaledBefore = false;
+            // }
+            
+            
+            inputScreen.innerHTML = inputScreen.innerHTML.concat(button.value);
         });
     }
 
 });
+
+function clear (screen) {
+    screen.innerHTML = null;
+} 
