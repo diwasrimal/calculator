@@ -18,11 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (buttonType == 'ac') {
                 screen.innerHTML = null
             }
-            // else if (buttonType = 'del') {
-            //     let contentLength = screen.innerHTML.length - 1;
-            //     screen.innerHTML = screen.innerHTML.slice(0, contentLength);
-            // }
-            
+            else if (buttonType == "del") {
+                console.log("deleting")
+                screen.innerHTML = screen.innerHTML.slice(0, screen.innerHTML.length - 1)
+            }
             console.log(button.dataset.type);
             screen.innerHTML = screen.innerHTML.concat(button.value);
             console.log(screen.innerHTML);
