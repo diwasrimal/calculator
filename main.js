@@ -1,13 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("content loaded")
+    console.log("content loaded");
 
-    let buttons = document.getElementsByTagName('button')
-
-    console.log(buttons[3].value)
-    console.log(buttons.length)
+    var buttons = document.querySelectorAll('button');
+    var resultScreen = document.getElementById('result');
+    var result, operationString
 
     for (let i = 0; i < buttons.length; i++) {
-        console.log(buttons[i].value)
+        let button = buttons[i];
+        console.log(button.dataset.value)
+
+        // Add a event listener for each button
+        button.addEventListener('click', () => {
+            
+            console.log(button.dataset.type)
+            
+            
+        });
     }
 
+    
+
 })
+            // let buttonType = button.dataset.type;
+            // if (buttonType == 'ac') {
+            //     resultScreen.innerHTML = null
+            // }
+            
+
+
+
+
+
+            // console.log(button.dataset.type)
+            // resultScreen.innerHTML += button.value
