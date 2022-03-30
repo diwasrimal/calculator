@@ -8,41 +8,41 @@
 		<body>
 			<div id="container">
 				<div id="sub-container">
-					<!-- Result box -->
-					<div id="result"></div>
+					<!-- Screen -->
+					<div id="screen"></div>
 
 					<!-- Just the ON button -->
 					<div class="rows" style="justify-content: right">
-						<button id="on-button">ON</button>
+						<button  data-type="on" id="on-button">ON</button>
 					</div>
 					<!-- Every other rowss -->
 					<div class="rows first">
-						<button>7</button>
-						<button>8</button>
-						<button>9</button>
-						<button style="background: rgb(236, 78, 5)">DEL</button>
-						<button style="background: rgb(236, 78, 5)">AC</button>
+						<button data-type="num" value="7">7</button>
+						<button data-type="num" value="8">8</button>
+						<button data-type="num" value="9">9</button>
+						<button data-type="del" style="background: rgb(236, 78, 5)">DEL</button>
+						<button data-type="ac" value="" style="background: rgb(236, 78, 5)">AC</button>
 					</div>
 					<div class="rows">
-						<button>4</button>
-						<button>5</button>
-						<button>6</button>
-						<button>×</button>
-						<button>÷</button>
+						<button data-type="num" value="4">4</button>
+						<button data-type="num" value="5">5</button>
+						<button data-type="num" value="6">6</button>
+						<button data-type="operator" value="×">×</button>
+						<button data-type="operator" value="÷">÷</button>
 					</div>
 					<div class="rows">
-						<button>1</button>
-						<button>2</button>
-						<button>3</button>
-						<button>+</button>
-						<button>-</button>
+						<button data-type="num" value="1">1</button>
+						<button data-type="num" value="2">2</button>
+						<button data-type="num" value="3">3</button>
+						<button data-type="operator" value="+">+</button>
+						<button data-type="operator" value="-">-</button>
 					</div>
 					<div class="rows last">
-						<button>0</button>
-						<button>.</button>
-						<button>*10^</button>
-						<button>Ans</button>
-						<button>=</button>
+						<button data-type="num" value="0">0</button>
+						<button data-type="point" value=".">.</button>
+						<button data-type="times10">*10^</button>
+						<button data-type="ans">Ans</button>
+						<button data-type="equal">=</button>
 					</div>		
 				</div>
 			</div>
